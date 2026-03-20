@@ -101,7 +101,6 @@ const getPuter = (): typeof window.puter | null =>
 
 export const usePuterStore = create<PuterStore>((set, get) => {
     const setError = (msg: string) => {
-
         set({
             error: msg,
             isLoading: false,
@@ -351,7 +350,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
                     ],
                 },
             ],
-            { model: "claude-3-7-sonnet" }
+            { model: "claude-sonnet-4.6" }
         ) as Promise<AIResponse | undefined>;
     };
 
